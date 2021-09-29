@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   namespace :api do
     get '/things', to:'things#index'
     get '/properties', to: 'properties#index'
+
+    get 'cities', to: 'properties#cities'
+    get 'cities/:city', to: 'properties#city'
+    get 'agents', to: 'agents#index'
   end 
 end
